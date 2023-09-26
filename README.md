@@ -92,23 +92,6 @@ Response:
 {"ALL": [{"player_full_name": "Trae Young", "count": "92", "ranking": "6"}], "POSITIVE": [{"player_full_name": "Trae Young", "count": "11", "ranking": "5"}], "NEGATIVE": [{"player_full_name": "Trae Young", "count": "10", "ranking": "6"}], "NEUTRAL": [{"player_full_name": "Trae Young", "count": "68", "ranking": "6"}]}
 ```
 
-## TO DO (Everyone please update here from time to time)
-1. Set up and integrate AWS Cognito with the front end (assigned to ?)
-2. NBA data scraping (assigned to Joy)
-- Create a more comprehensive table for the current NBA players. One-off manual effort is needed
-- Currently only 2 columns (Fullname, Nicknames), we need (Fullname, Nicknames, PhotoS3Url, Team)
-- Third-party NBA API may be helpful
-- Need to identify more nicknames (refer to ./nba_data/nba player.csv)
-- Need to map players to team (we want only active players) 
-- Need to download & store players' photos in S3. The most popular 30~50 will suffice. 
-- Expose /GET photo (params: fullname="") which returns the S3Url for the photo of a specific player. The frontend will need it.
-3. Front end (assigned to Dhruvin)
-- Frontend integrate AWS Cognito for login/signup (assigned to Dhruvin. Half-way done, contact Mark for more details)
-- Mark has already written some code for the frontend in React. Check the front-end github repo for reference.
-4. Design email message for user subscription (assigned to ?)
-- We have the json result from GET /playerv2 but need to translate that into human readable paragraphs before publishing via SNS.
-- See LF3
-
 ## Features
 - Top 3 most liked players of the day/month
 - Top 3 most hated players of the day/month
@@ -117,13 +100,5 @@ Response:
 - Find your player’s popularity ranking
 - Subscribe to daily report about your favorite player
 
-## Contributing
--Ho Shing Yam, Mark (hy2287@nyu.edu)
-
 ## System Design Diagram
 ![plot](./nyucloudfinalproj.drawio.png)
-
-## Links
-[Front-end](https://nyu-final-proj-front-end.s3.amazonaws.com/index.html)\
-[Prototype](https://marvelapp.com/prototype/7f6c532/screen/85969524)\
-[Proposal](https://docs.google.com/document/d/1wvxu2ikUTOj7Iv4xydZlQcTS5IZ8J3_aaN4Ehx_FBcE/edit)\
